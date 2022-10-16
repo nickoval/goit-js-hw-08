@@ -34,12 +34,14 @@ function onFormInput(evt) {
 }
 
 function onFormInitial() {
-  const dataSaved = localStorage.getItem(GOVNO_KEY);
-  if (dataSaved) {
-    // console.log('onFormInit ~ govnoSaved: ', govnoSaved);
-    const initialData = JSON.parse(dataSaved);
-
+  // const dataSaved = localStorage.getItem(GOVNO_KEY);
+  const initialData = JSON.parse(localStorage.getItem(GOVNO_KEY));
+  console.log('onFormInitial ~ initialData.email: ', initialData.email);
+  console.log('onFormInitial ~ initialData.message: ', initialData.message);
+  if (initialData.email) {
     emailRef.value = initialData.email;
+  }
+  if (initialData.message) {
     messageRef.value = initialData.message;
   }
 }
