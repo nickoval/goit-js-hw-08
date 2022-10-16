@@ -23,14 +23,6 @@ function createGallery(items) {
 
 galleryRef.innerHTML = markapGallery;
 
-document.addEventListener('click', onImageClick);
-
-function onImageClick(evt) {
-  evt.preventDefault();
-  if (!evt.target.classList.contains('gallery__image')) {
-    return;
-  }
-}
 new SimpleLightbox('.gallery__item', {
   captionsData: 'alt',
   captionDelay: 250,
