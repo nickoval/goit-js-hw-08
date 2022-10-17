@@ -51,9 +51,9 @@ function onFormInitial() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log('email: ', emailRef.value);
-  console.log('message: ', messageRef.value);
-  // console.log('formData: ', formData);
+  // console.log('email: ', emailRef.value);
+  // console.log('message: ', messageRef.value);
+  console.log('formData: ', formData);
   evt.currentTarget.reset();
   localStorage.removeItem(GOVNO_KEY);
 }
