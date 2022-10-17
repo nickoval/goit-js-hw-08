@@ -36,8 +36,8 @@ function onFormInput(evt) {
 function onFormInitial() {
   // const dataSaved = localStorage.getItem(GOVNO_KEY);
   const initialData = JSON.parse(localStorage.getItem(GOVNO_KEY));
-  console.log('onFormInitial ~ initialData.email: ', initialData.email);
-  console.log('onFormInitial ~ initialData.message: ', initialData.message);
+  // console.log('onFormInitial ~ initialData.email: ', initialData.email);
+  // console.log('onFormInitial ~ initialData.message: ', initialData.message);
   if (initialData.email) {
     emailRef.value = initialData.email;
   }
@@ -48,8 +48,9 @@ function onFormInitial() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log('email: ', emailRef.value);
-  console.log('message: ', messageRef.value);
+  // console.log('email: ', emailRef.value);
+  // console.log('message: ', messageRef.value);
+  console.log('formData: ', formData);
   evt.currentTarget.reset();
   localStorage.removeItem(GOVNO_KEY);
 }

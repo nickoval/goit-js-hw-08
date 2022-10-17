@@ -20,5 +20,7 @@ function onSetTimeupdate(data) {
   localStorage.setItem(keyCurrentTime, data.seconds);
 }
 
-console.log('getItem: ', localStorage.getItem(keyCurrentTime));
-player.setCurrentTime(localStorage.getItem(keyCurrentTime));
+// console.log('getItem: ', localStorage.getItem(keyCurrentTime));
+if (localStorage.getItem(keyCurrentTime)) {
+  player.setCurrentTime(localStorage.getItem(keyCurrentTime));
+}
