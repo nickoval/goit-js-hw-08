@@ -21,6 +21,15 @@ function onSetTimeupdate(data) {
 }
 
 // console.log('getItem: ', localStorage.getItem(keyCurrentTime));
+// Вариант проверки через if
 if (localStorage.getItem(keyCurrentTime)) {
   player.setCurrentTime(localStorage.getItem(keyCurrentTime));
 }
+
+// Вариант проверки через try...catch   НЕ ПРАЦЮЄ
+// try {
+//   player.setCurrentTime(localStorage.getItem(keyCurrentTime));
+// } catch (error) {
+//   console.log('error.name: ', error.name);
+//   console.log('error.message: ', error.message);
+// }
